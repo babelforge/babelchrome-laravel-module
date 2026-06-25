@@ -1,0 +1,50 @@
+{
+  "id": "babelforge.laravel-module",
+  "name": "Laravel Module",
+  "version": "1.0.0",
+  "requirements": {
+    "php": ">=8.4"
+  },
+  "description": "A Laravel-based BabelChrome web module used to validate framework-agnostic module execution.",
+  "type": "tool",
+  "enabled": true,
+  "runtime": {
+    "type": "web",
+    "entrypoint": "public/index.php",
+    "processIsolation": true
+  },
+  "entrypoint": "public/index.php",
+  "routes": [
+    {
+      "scheme": "babelchrome",
+      "host": "laravel",
+      "handler": "index"
+    }
+  ],
+  "fileTypes": [],
+  "hooks": [
+    "settings.section.register"
+  ],
+  "permissions": [
+    "serve-assets"
+  ],
+  "menuItems": [
+    {
+      "id": "laravel.open",
+      "label": "Open Laravel Module",
+      "hook": "settings.section.register",
+      "route": "babelchrome://laravel",
+      "contexts": [
+        "settings.modules"
+      ]
+    }
+  ],
+  "badge": {
+    "text": "LARA",
+    "textColor": "#ffffff",
+    "backgroundColor": "#ff2d20"
+  },
+  "settings": {
+    "route": "babelchrome://modules"
+  }
+}

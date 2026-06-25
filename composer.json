@@ -1,0 +1,38 @@
+{
+    "name": "babelforge/babelchrome-laravel-module",
+    "description": "Laravel BabelChrome module for validating the generic web module contract.",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "BabelForge\\BabelChromeLaravelModule\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BabelForge\\BabelChromeLaravelModule\\Tests\\": "tests/"
+        }
+    },
+    "require": {
+        "php": ">=8.4",
+        "laravel/framework": "^12.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.95",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "phpunit/phpunit": "^12.5"
+    },
+    "scripts": {
+        "cs": "php-cs-fixer fix --dry-run --diff",
+        "cs-fix": "php-cs-fixer fix",
+        "test": "phpunit",
+        "analyse": "phpstan analyse --memory-limit=512M",
+        "qa": [
+            "@cs",
+            "@analyse",
+            "@test"
+        ]
+    }
+}

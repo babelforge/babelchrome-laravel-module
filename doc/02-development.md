@@ -22,7 +22,7 @@ Run quality checks with:
 composer qa
 ```
 
-Build the production zip from the modules workspace:
+Build the production zip from the meta workspace root:
 
 ```bash
 ./tools/dev2prod.sh laravel-module

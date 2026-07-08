@@ -7,7 +7,7 @@ The manifest declares:
 ```json
 {
   "runtime": {
-    "type": "web",
+    "type": "php-web",
     "entrypoint": "public/index.php",
     "processIsolation": true
   }

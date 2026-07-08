@@ -1,7 +1,7 @@
 {
   "id": "babelforge.laravel-module",
   "name": "Laravel Module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "requirements": {
     "php": ">=8.4"
   },
@@ -9,7 +9,7 @@
   "type": "tool",
   "enabled": true,
   "runtime": {
-    "type": "web",
+    "type": "php-web",
     "entrypoint": "public/index.php",
     "processIsolation": true
   },

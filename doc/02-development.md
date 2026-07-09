@@ -7,14 +7,15 @@ The manifest declares:
 ```json
 {
   "runtime": {
-    "type": "php-web",
-    "entrypoint": "public/index.php",
-    "processIsolation": true
+    "type": "process-web",
+    "command": "php",
+    "args": ["-S", "127.0.0.1:{{ port }}", "-t", "public", "public/index.php"],
+    "readyUrl": "http://127.0.0.1:{{ port }}/health"
   }
 }
 ```
 
-Process isolation prevents Laravel framework classes from colliding with the ExtensionHost Symfony classes.
+The Laravel app runs in its own module-owned PHP process, so framework classes do not collide with the ExtensionHost Symfony classes.
 
 Run quality checks with:
 

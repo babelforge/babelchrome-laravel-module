@@ -15,7 +15,7 @@ The manifest declares:
 }
 ```
 
-The Laravel app runs in its own module-owned PHP process, so framework classes do not collide with the ExtensionHost Symfony classes.
+The Laravel app runs in its own module-owned PHP process, so framework classes do not collide with BabelChrome Browser internals or other modules.
 
 Run quality checks with:
 

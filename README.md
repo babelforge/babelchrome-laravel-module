@@ -2,7 +2,7 @@
 
 `babelforge.laravel-module` is a Laravel-based sample module used to validate framework-agnostic BabelChrome module execution.
 
-It uses `processIsolation` so its Laravel dependencies stay isolated from the LocalServiceHost Symfony runtime.
+It runs as a `process-web` module so its Laravel dependencies stay inside the module-owned process and vendor tree.
 
 ## Documentation
 
